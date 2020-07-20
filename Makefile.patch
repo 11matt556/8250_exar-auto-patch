@@ -1,0 +1,12 @@
+--- Makefile	2020-06-25 14:23:54.340049559 -0400
++++ /home/ts-test/Desktop/Kernel_Patch/linux-5.3_original/drivers/tty/serial/8250/Makefile	2019-09-15 17:19:32.000000000 -0400
+@@ -39,9 +39,3 @@
+ obj-$(CONFIG_SERIAL_OF_PLATFORM)	+= 8250_of.o
+ 
+ CFLAGS_8250_ingenic.o += -I$(srctree)/scripts/dtc/libfdt
+-
+-all:
+-	make -C /lib/modules/$(shell uname -r)/build M=$(shell pwd) modules
+-
+-clean:
+-	make -C /lib/modules/$(shell uname -r)/build M=$(shell pwd) clean

@@ -1,0 +1,9 @@
+@@ -326,7 +326,7 @@
+ 	 * devices will export them as GPIOs, so we pre-configure them safely
+ 	 * as inputs.
+ 	 */
+-	u8 dir = pcidev->vendor == PCI_VENDOR_ID_EXAR ? 0xff : 0x00;
++	u8 dir = (pcidev->vendor == PCI_VENDOR_ID_EXAR && pcidev->subsystem_vendor != PCI_VENDOR_ID_SEALEVEL) ? 0xff : 0x00;
+ 
+ 	writeb(0x00, p + UART_EXAR_MPIOINT_7_0);
+ 	writeb(0x00, p + UART_EXAR_MPIOLVL_7_0);
