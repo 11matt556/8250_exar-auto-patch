@@ -1,6 +1,6 @@
 Run ./patcher.sh --help for optional arguments
 
-The process is essenrially 3 steps.
+The process is essentially 3 steps.
 0) Run chmod +x patcher.sh to make sure it is executable
 1) Run ./patcher.sh from the terminal. 
 2) Apply the patch to your kernel using insmod, modprobe etc as you would with any other kernel module. Make sure you unload the old module before loading the new one. There are extra steps required to get the kernel to use the new driver on boot, but that can vary by distribution.
